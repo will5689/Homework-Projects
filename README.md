@@ -1,2 +1,2 @@
-# Homework
-This repo will have all the homework in it 
+# Homeworks
+This repo will have all the class homeworks  in it 
