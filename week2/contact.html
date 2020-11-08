@@ -1,0 +1,57 @@
+<head>
+    <title>"Will's Contact Page"</title>
+    <!-- Bootstrap style link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen">
+    <!--Button for the Nav screen -->   
+  </head>
+  <body>
+  <header>
+    <!--navbar in progress/Done-->
+      <nav class="navbar-dark bg-dark"> <!--need to work me buttons in the vnav bar add a picture and get the link for the concact pages up/ Done -->
+        
+         <div class="navbar-nav">
+          <div class="container">
+            <a href="index.html" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">About me</a>
+             <a href="portfolio.html" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Portfolio</a>
+          
+          </div>
+        </div>  
+        
+  </header>     
+  <!-- contact form/ stolen from bootstrap/ a work in progress -->
+<form class="text-center border border-light p-5" action="#!">
+
+  <p class="h4 mb-4">Contact us</p>
+
+  <!-- Name -->
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+
+  <!-- Email -->
+  <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Subject -->
+  <label>Subject</label>
+  <select class="browser-default custom-select mb-4">
+      <option value="" selected>Choose option</option>
+      <option value="1" >Request Email</option>
+      <option value="2"> Where's Will?</option>
+      <option value="3"> Request Cell#</option>
+      
+  </select>
+
+  <!-- Message -->
+  <div class="form-group">
+      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+  </div>
+
+  <!-- Copy -->
+  <div class="custom-control custom-checkbox mb-4">
+      <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+      <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+  </div>
+</form>
+<!-- Default form contact -->
+  </body>
