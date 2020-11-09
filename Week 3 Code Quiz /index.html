@@ -1,36 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <title>Quiz Game </title>
+    </head>
+
+    <body>
+
+        <body>
+            <div class="container">
+                <div class="row">
+                    <header>
+                        <button id="view-scores" type="button" class="btn btn-light">
+                            View High Scores
+                        </button>
+                    </header>
+                </div>
+                <div class="container" id="main-container">
+                    <div class="row not-flex">
+                        <div class="instructions" id="instructions">
+                            <p>
+                                Answer as many code-related questions as you can in 1 minute. For
+                                every correct answer, you get 1 points. For every wrong answer,
+                                you will lose 10 seconds.
+                            </p>
+                        </div>
+                        <div id="question-container" class="hide">
+                            <div id="question">Question</div>
+                            <div id="answer-buttons" class="btn-grid">
+                                <button class="custbtn" id="btn-1" correctAnswer=''>
+                                    Answer 1
+                                </button>
+                                <button class="custbtn" id="btn-2">Answer 2</button>
+                                <button class="custbtn" id="btn-3">Answer 3</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button id="start-btn" class="start-btn custbtn">Start</button>
+                    </div>
+                    <div class="score hide" id="score">Your Score:</div>
+                    <div class="timer hide" id="timer">Time Left:</div>
+                    <div class="time-left hide" id="time-left">Time Left:</div>
+                    <div class="input-group mb-3 hide" id="initials-input">
+                        <input id="initials-input-field" type="text" class="form-control" placeholder="Your Initials"
+                            aria-label="Recipient's username" aria-describedby="add-initials">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="add-initials">Add Your
+                                Score</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- new row with div for high scores -->
+                <div class="row not-flex hide" id="high-scores">
+                    <h1>High Scores</h1>
+                    <ul id="high-scores-list"></ul>
+                </div>
+            </div>
+            </div>
 
 
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
+            <script type="text/javascript">
 
-    <script src="script.js"></script>
-  </body>
+        </body >
+
 </html>
+
+
+
+            
