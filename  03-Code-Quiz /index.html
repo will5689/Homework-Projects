@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+
+        <title>Quiz Game </title>
+    </head>
+
+    <body>
+
+
+        <div class="container">
+            <div class="row">
+                <header>
+                    <button id="view-scores" type="button" class="btn btn-light">
+                        View High Scores
+                    </button>
+                </header>
+            </div>
+
+
+            <div id="instructions" class=''>
+                </p>
+                Answer as many code-related questions as you can in 1 minute. For
+                every correct answer, you get 1 points. For every wrong answer,
+                you will lose 10 seconds.
+                </p>
+            </div>
+            <div id="question-container" class='hide'></div>
+            <div id='question'>Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn-grid"> Answer 1</button>
+                <button class="btn-grid"> Answer 2</button>
+                <button class="btn-grid"> Answer 3</button>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class='start-btn btn'>Start</button>
+                <button id='next-button' class='next-btn btn hide '> Next </button>
+            </div>
+
+
+            <div class=" score hide" id="score">Your Score:</div>
+            <div class="timer hide" id="timer">Time Left:</div>
+
+            <div class="time-left hide" id="time-left">Time Left:
+            </div>
+            <div class="input-group mb-3 hide" id="initials-input">
+                <input id="initials-input-field" type="text" class="form-control" placeholder="Your Initials"
+                    aria-label="Recipient's username" aria-describedby="add-initials">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="add-initials">Add Your
+                        Score</button>
+                </div>
+            </div>
+
+            <!-- new row with div for high scores -->
+            <div class="row not-flex hide" id="high-scores">
+                <h1>High Scores</h1>
+                <ul id="high-scores-list"></ul>
+            </div>
+
+        </div>
+    </body>
+
+</html>

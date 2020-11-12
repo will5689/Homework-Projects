@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded;
+
+
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body {
+    --hue: var(--hue-neutral) padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 53, 53);
+}
+
+
+
+.container {
+    width: 800px;
+    max-width: 85%;
+    background-color: rgb(132, 148, 45);
+    border-radius: 50px;
+    padding: 50px;
+    box-shadow: 0 0 10px 3px;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 1px 0;
+}
+
+.btn {
+    --hue: var (--hue-neutral);
+    border: 1px; solid hsl(var(--hue), 100%,30%);
+    background: color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 40px 10px;
+    color: rgb(71, 4, 4);
+    outLine: none;
+}
+
+.btn-hover {
+    border-color: black;
+}
+
+.start-btn {
+    font-size: 1.5 rem;
+    font-weight: bold;
+    padding: 10px 20px;
+
+
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.hide {
+    display: none;
+}
