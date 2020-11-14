@@ -3,7 +3,7 @@ const questionEl = document.getElementById('question')
 const questionContainerEl = document.getElementById('question-container')
 const answerBtnsEl = document.getElementById('answer-btns')
 
-let shuffledQuestion, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener("click", startQuiz);
 
@@ -20,7 +20,7 @@ function startQuiz() {
 };
 
 function setNextQuestion() {
-  resetState()
+  // resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 
 
@@ -42,49 +42,56 @@ function showQuestion(question) {
   });
 }
 
-function resetState() {
-  while (answerBtnsEl.firstchild) {
-    answerBtnsEl.removeChild(answerBtnsEl.firstchild)
-  }
-}
+// function resetState() {
+//   while (answerBtnsEl.firstchild) {
+//     answerBtnsEl.removeChild(answerBtnsEl.firstchild)
+//   }
+// };
 
 function selectAnswer(e) {
 
 };
 
 const questions = [{
-  question: "What does HTML mean",
+  question: "What does HTML stand for?",
   answers: [{
-      text: 'Need another guess',
+      text: "Hyper Text Markup Language",
       correct: true
     },
 
     {
-      text: "nothing",
+      text: "Hyperlinks and text markup Languages",
       correct: false
     },
     {
-      text: "The Wrong Answer",
+      text: "Home tool markup Languages",
       correct: false
     }
 
   ]
-}]
+}];
 
-// A: 'Nothing',
-//   A: 'lucky guess',
-//   A: 'Need another guess',
 
-//   Q: " Does your computer need to be ON to work?",
-//   1: "NO",
-//   2: "Yes",
-//   3: "I dont Know"
-// };
 
-questions[0] = "question".innerHTML = questions[0];
-console.log(questions);
+// questions[0] = "question".innerHTML = questions[0];
+// console.log(questions);
 
 
 
 
-//
+
+//   question: "What does CSS Stand for?",
+//   choiceA: "NOTHING ",
+//   choiceB: "Cascading Style Sheet",
+//   choiceC: " Undan Dictionary ",
+//   correct: "Cascading Style Sheet",
+// },
+
+// {
+//   question: " Text for Question",
+//   choiceA: "the first question ",
+//   choiceB: "the second question",
+//   choiceC: "the 3rd question",
+//   correct: "",
+// },
+// ];

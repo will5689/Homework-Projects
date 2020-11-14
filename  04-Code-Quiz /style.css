@@ -43,11 +43,10 @@ body {
 
 .btn {
     --hue: var (--hue-neutral);
-    border: 1px; solid hsl(var(--hue), 100%,30%);
-    background: color: hsl(var(--hue), 100%, 50%);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
     padding: 40px 10px;
-    color: rgb(71, 4, 4);
     outLine: none;
 }
 
@@ -55,10 +54,11 @@ body {
     border-color: black;
 }
 
-.start-btn {
-    font-size: 1.5 rem;
+.start-btn,
+.next-btn {
+    font-size: 1.875 em;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 50px 40px;
 
 
 }
