@@ -2,9 +2,11 @@ const startButton = document.getElementById('start-btn')
 const questionEl = document.getElementById('question')
 const questionContainerEl = document.getElementById('question-container')
 const answerBtnsEl = document.getElementById('answer-btns')
-newconst timerEl = document.getElementById('timer');
+const timerEl = document.getElementById('timer');
+const setHighScoreEl = document.getElementById("high-scores-list")
 points = 0
-timer = 10
+timer = 100
+highScore = 0
 
 let shuffledQuestions, currentQuestionIndex = 0
 
@@ -19,20 +21,19 @@ function startQuiz() {
     timer = timer - 1
     console.log("Time me", timer)
     timerEl.innerHTML = timer
-    if (timer === 0) {
+    console.log(currentQuestionIndex, questions.length, "lokk at me ")
+    if (timer === 0 || currentQuestionIndex === questions.length) {
       clearInterval(stopwatch)
       setHighScore()
-    };
-
-
-
+      console.log("im the high score", highScore)
+    }
   }, 1000)
+
+
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerEl.classList.remove("hide")
   setNextQuestion()
-
-
 };
 
 function setNextQuestion() {
@@ -47,9 +48,18 @@ function setNextQuestion() {
 };
 
 function setHighScore() {
-  console.log("its the end of the world ")
+  console.log("its the end of the Game")
+  setHighScoreEl.innerText = points
+  questionContainerEl.classList.add("hide")
 
-}
+
+  if (points > highScore) {
+    highScore = points
+  }
+
+  console.log(highScore, "heres a new line ")
+};
+
 
 function showQuestion(question) {
   console.log('hi');
@@ -88,11 +98,15 @@ function resetState(question) {
 };
 
 function selectAnswer(ans) {
-  if (ans.correct) {
-    points = 10 + points
+  if (ans.correct === true) {
+    points = points + 10
+    console.log("im adding points")
     const scoreEl = document.getElementById("score").innerHTML = points;
-
+  } else {
+    timer = timer - 10
   }
+
+
   setNextQuestion()
   console.log("Im an a", ans.correct)
 };
@@ -144,28 +158,3 @@ const questions = [{
   }
 
 ];
-
-
-
-// questions[0] = "question".innerHTML = questions[0];
-// console.log(questions);
-
-
-
-
-
-//   question: "What does CSS Stand for?",
-//   choiceA: "NOTHING ",
-//   choiceB: "Cascading Style Sheet",
-//   choiceC: " Undan Dictionary ",
-//   correct: "Cascading Style Sheet",
-// },
-
-// {
-//   question: " Text for Question",
-//   choiceA: "the first question ",
-//   choiceB: "the second question",
-//   choiceC: "the 3rd question",
-//   correct: "",
-// },
-// ];
