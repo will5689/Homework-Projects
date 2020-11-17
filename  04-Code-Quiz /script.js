@@ -4,13 +4,19 @@ const questionContainerEl = document.getElementById('question-container')
 const answerBtnsEl = document.getElementById('answer-btns')
 const timerEl = document.getElementById('timer');
 const setHighScoreEl = document.getElementById("high-scores-list")
+//const addIntials = document.getElementById("add-initials");
+//const setHighScore = document.querySelector("high-scores-list");
+//const highscore = localStorage.setItem('"high-scores-list"');
 points = 0
-timer = 100
+timer = 50
 highScore = 0
 
 let shuffledQuestions, currentQuestionIndex = 0
 
 startButton.addEventListener("click", startQuiz);
+//addIntials.addEventListener("click", )
+
+
 
 function startQuiz() {
   console.log("started")
@@ -40,7 +46,14 @@ function setNextQuestion() {
   console.log(questions.length, currentQuestionIndex)
   if (questions.length === currentQuestionIndex) {
     return setHighScore()
+      
+    
+    console.log(highScore)
+  
   }
+
+
+
   // resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
   console.log("next question ", shuffledQuestions, currentQuestionIndex)
