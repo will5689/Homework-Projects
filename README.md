@@ -1,2 +1,2 @@
 # Homework Projects 
-Inside this repo will be my class homeworks project that I'm working on and that are finished 
+Inside this repo will be my class homework projects that I'm working on and that are finished 
