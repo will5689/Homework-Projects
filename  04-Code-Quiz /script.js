@@ -173,5 +173,13 @@ const questions = [{
 ];
 
 function save() {
-  const new_data = " " + document.getElementById(add-initials).value;
+  const new_data = " " + document.getElementById('add-initials').value;
+
+  if (localStorage.getItem('data') == null) {
+    localStorage.setItem('data', '[]');
+  }
+  const old_data = JSON.parese(localStorage.getItem('data'));
+  old_data.push(new_data);
+
+  localStorage.setItem('data', JSON.stringify(old_data));
 }
