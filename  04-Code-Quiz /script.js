@@ -171,3 +171,7 @@ const questions = [{
   }
 
 ];
+
+function save() {
+  const new_data = " " + document.getElementById(add-initials).value;
+}
