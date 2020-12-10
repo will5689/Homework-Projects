@@ -4,12 +4,7 @@ const questionContainerEl = document.getElementById('question-container')
 const answerBtnsEl = document.getElementById('answer-btns')
 const timerEl = document.getElementById('timer');
 const setHighScoreEl = document.getElementById("high-scores-list")
-//var HighScore = JSON.parse(localStorage("userScore"));
 
-//var storedScores = JSON.parse(localStorage.getItem("userData"));
-//const addIntials = document.getElementById("add-initials");
-//const setHighScore = document.querySelector("high-scores-list");
-//const highscore = localStorage.setItem('"high-scores-list"');
 points = 0
 timer = 50
 highScore = []
@@ -18,7 +13,7 @@ highScore = []
 let shuffledQuestions, currentQuestionIndex = 0
 
 startButton.addEventListener("click", startQuiz);
-//addIntials.addEventListener("click", )
+
 
 
 
@@ -58,7 +53,7 @@ function setNextQuestion() {
 
 
 
-  // resetState()
+
   showQuestion(shuffledQuestions[currentQuestionIndex])
   console.log("next question ", shuffledQuestions, currentQuestionIndex)
   currentQuestionIndex++
@@ -75,7 +70,7 @@ function setHighScore() {
   }
 
   console.log(highScore, "heres a new line ")
-  localStorage.setitem (highScore)
+
   
 };
 
@@ -104,16 +99,9 @@ function showQuestion(question) {
 }
 
 
-// someVar = some_other_function();
-// alert(someVar);
-// someObj.addEventListener("click", function () {
-//   some_function(someVar);
-// }, false);
 
 function resetState(question) {
-  //   while (answerBtnsEl.firstchild) {
-  //     answerBtnsEl.removeChild(answerBtnsEl.firstchild)
-  //   }
+
 };
 
 function selectAnswer(ans) {
@@ -177,59 +165,6 @@ const questions = [{
   }
 
 ];
-
-
-
-
-
-
-
-
-
-// function displayScores() {
-//     if (highScore !== null) {
-//         var scoreList = document.createElement("ol");
-//         scoreList.className = "scoreListClass";
-//         for (var i = 0; i < storedScores.length; i++) {
-//             var initials = storedScores[i].inits;
-//             var scores = storedScores[i].userScore
-//             var scoreEntry = document.createElement("li");
-//             scoreEntry.innerHTML = initials + " - " + scores;
-//             scoreList.appendChild(scoreEntry);
-//         }
-//       highScoresArea.appendChild(scoreList);
-//       console.log('Hello', scoreListClass);
-//     }
-// };
-
-// displayScores();
-
-
-
-
-
-// clearBtn.addEventListener("click", function () {
-//     highScoresArea.innerHTML = "";
-//     window.localStorage.clear();
-
-// });
-
-
-// need to get local storage figure out 
-// function save() {
-  
-//   const new_data = " " + document.getElementById('add-initials').value;
-
-//   if (localStorage.getItem('data') == null) {
-//     localStorage.setItem('data', '[]');
-//   }
-//   const old_data = JSON.parese(localStorage.getItem('data'));
-//   old_data.push(new_data);
-
-//   localStorage.setItem('data', JSON.stringify(old_data));
-// }
-
-
 
 
 
