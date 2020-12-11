@@ -6,7 +6,7 @@ var hours = ["09", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9"
 
 var dayHours = {
     id: "ID",
-    hour: "10000",
+    hour: ["10000"],
     time: "TIME"
 };
 console.log(dayHours.hour);
@@ -95,19 +95,21 @@ console.log(dayHours.hour);
  
 
 for (var i = 0; i < hourList.length; i++) {
-  console.log("The Time is  " + hourList[i]);
+  console.log("The Time is " + hourList[i]);
 }
 
        
 for (var i = 0; i < dayHours; i++) {
-    diplay.content;
+    display.content; newC
   
 }
 
 console.log(hourList)
-window.localStorage.setItem('what', JSON.stringify(dayHours));
-       
+window.localStorage.setItem('time', JSON.stringify(dayHours));
+
+//display  (id, hour, time);
+
 
 const test = localStorage.getItem('id');
+ 
 
-console.log (test)
