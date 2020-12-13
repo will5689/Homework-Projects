@@ -5,9 +5,9 @@ const answerBtnsEl = document.getElementById('answer-btns')
 const timerEl = document.getElementById('timer');
 const setHighScoreEl = document.getElementById("high-scores-list")
 
-points = 0
-timer = 50
-highScore = []
+points = 10
+timer = 75
+highScore = 0
   
 
 let shuffledQuestions, currentQuestionIndex = 0
@@ -26,7 +26,7 @@ function startQuiz() {
     timer = timer - 1
     console.log("Time me", timer)
     timerEl.innerHTML = timer
-    console.log(currentQuestionIndex, questions.length, "lokk at me ")
+    console.log(currentQuestionIndex, questions.length, "look at me ")
     if (timer === 0 || currentQuestionIndex === questions.length) {
       clearInterval(stopwatch)
       setHighScore()
@@ -168,14 +168,3 @@ const questions = [{
 
 
 
-
-function endgame (){
-    // btnStart.classList.add("d-none")
-    myScore.innaText = count
-    addscore.classList.remove("d-none")
-    timecounter.classList.add("d-none")
-    quizQuestions.classList.add("d-none")
-    addscore.classList.remove("d-none")
-
-
- }
