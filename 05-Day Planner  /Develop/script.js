@@ -1,15 +1,17 @@
 
 
 
-const hmmm = document.getElementById("id");
-var hours = ["09", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-var dayHours = {
-    id: "ID",
-    hour: ["10000"],
-    time: "TIME"
-};
-console.log(dayHours.hour);
+
+    const hmmm = document.getElementById("id");
+    var hours = ["09", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+    var dayHours = {
+        id: "ID",
+        hour: ["10000"],
+        time: "TIME"
+    };
+    console.log(dayHours.hour);
 
     const hourList = [
         {
@@ -94,22 +96,22 @@ console.log(dayHours.hour);
     ];
  
 
-for (var i = 0; i < hourList.length; i++) {
-  console.log("The Time is " + hourList[i]);
-}
+    for (var i = 0; i < hourList.length; i++) {
+        console.log("The Time is " + hourList[i]);
+    }
 
        
-for (var i = 0; i < dayHours; i++) {
-    display.content; newC
+    for (var i = 0; i < dayHours; i++) {
+        display.content; newC
   
-}
+    }
 
-console.log(hourList)
-window.localStorage.setItem('time', JSON.stringify(dayHours));
+    console.log(hourList)
+    window.localStorage.setItem('time', JSON.stringify(dayHours));
 
-//display  (id, hour, time);
+    //display  (id, hour, time);
 
 
-const test = localStorage.getItem('id');
+    const test = localStorage.getItem('id');
  
 
