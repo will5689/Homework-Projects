@@ -69,3 +69,7 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.emptyDiv {
+  color: rgb(78, 9, 9);
+}

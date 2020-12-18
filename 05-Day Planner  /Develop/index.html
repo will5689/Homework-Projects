@@ -26,8 +26,7 @@
     <div class="container">
       <div class="input-group mb-3">
         <span class="input-text">08 AM</span>
-        <input type="text" class="form-control" class="row" data-timekey="8am-block" id="8am"
-          aria-describedby="button-addon2">
+        <input type="text" class="form-control" class="row" id="8am" aria-describedby="button-addon2">
         <div class="input-group-prepend">
           <button class="saveBtn" id="save">Save</button>
         </div>
@@ -94,11 +93,11 @@
     <script type="text/javascript"></script>
     <script>
       $(document).ready(function () {
-
-        var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a')
+        var currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
         console.log(currentTime);
-        $('#emtpyDiv').text(currentTime)
+        $("#emtpyDiv").text(currentTime);
       });
+
     </script>
   </body>
 
