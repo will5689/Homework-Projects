@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+
 
     <title>Work Day Scheduler</title>
   </head>
@@ -27,21 +27,19 @@
     <div class="container">
       <div class="input-group mb-3">
         <span class="input-text">08 AM</span>
-        <input type="text" class="form-control" class="row" id="8am" aria-describedby="button-addon2">
-        <div class="input-group-prepend">
-          <button class="saveBtn" id="save">Save</button>
-        </div>
+        <input type="text" class="form-control" class="row" data-timekey="block" id="8">
+        <button class="saveBtn" id="save">Save</button>
       </div>
+    </div>
     </div>
     <div class="container">
       <div class="input-group mb-3">
-        <span class="input-text">09AM</span>
-        <input type="text" class="form-control" class="row" data-timekey="9am-block" id="9am"
+        <span class="input-text">09 AM</span>
+        <input type="text" class="form-control" class="row" data-timekey="block" id="9"
           aria-describedby="button-addon2">
-        <div class="input-group-prepend">
-          <button class="saveBtn" id="save">Save</button>
-        </div>
+        <button class="saveBtn" id="save">Save</button>
       </div>
+    </div>
     </div>
 
 
@@ -49,18 +47,15 @@
 
     <!-- Timeblocks go here -->
     </div>
+
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+
     <script>
-      $(document).ready(function () {
-        var currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
-        console.log(currentTime);
-        $("#emtpyDiv").text(currentTime);
-      });
 
     </script>
   </body>
+
 
 </html>
