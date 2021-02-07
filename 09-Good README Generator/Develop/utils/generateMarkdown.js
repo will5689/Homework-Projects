@@ -4,5 +4,5 @@ function generateMarkdown(data) {
 
 `;
 }
-
+console.log("hello");
 module.exports = generateMarkdown;
