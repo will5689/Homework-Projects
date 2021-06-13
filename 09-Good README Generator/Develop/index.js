@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const until = require("until");
+
+const generatorMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
@@ -19,12 +22,25 @@ const questions = [
     message: "Enter your GitHub Username",
   },
 ];
+
 // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, function (err) {
+    console.log(fileName);
+    console.log(data);
+    if (err) {
+      return console.log(err);
+    } else {
+      console.log(sucsess);
+    }
+  });
+}
 
 // // function to initialize program
 function init() {
-  inquirer.prompt(questions);
+  inquirer.prompt(questions).then(function (data) {
+    writeToFile("ReadME.md", generatorMarkdown(data));
+    console.log(data);
+  });
 }
-// function call to initialize program
 init();
