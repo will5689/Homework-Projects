@@ -1,11 +1,11 @@
-const inquirer = require("inquirer");
 const fs = require("fs");
-const until = require("until");
-const axios = require("axios");
-const generatorMarkdown = require("./utils/generateMarkdown");
-console.log("your connected");
+const inquirer = require("inquirer");
+//const until = require("until");
+
+const generatorMarkdown = require("./Develop/utils/generateMarkdown");
+//console.log("hello");
 // array of questions for user
-inquirer.prompt([
+const questions = [
   {
     type: "input",
     name: "name",
@@ -21,7 +21,7 @@ inquirer.prompt([
     name: "github",
     message: "Enter your GitHub Username",
   },
-]);
+];
 
 // function to write README file
 function writeToFile(fileName, data) {
